@@ -39,7 +39,7 @@ myip
 
 ## Build Kali Docker image
 ```
-docker-compose build
+make build
 ```
 
 ## How to use
