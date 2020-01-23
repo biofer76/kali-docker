@@ -43,14 +43,14 @@ docker-compose build
 ```
 
 ## How to use
-You can run command `kali` in project folder followed by a Kali tool commands and related arguments
+You can run command `kali` in project folder followed by a Kali tool command and related arguments
 
 ```
 ./kali "ping 192.168.1.1"
 ```
 
-**System wide usage**  
-If you prefer use Kali container as default command launcher, you can create an alias to run Kali tools as system-wide executable:
+### System-wide usage  
+If you prefer to use Kali container as default command launcher, you can create an alias to run Kali tools as system-wide executable:
 
 ```
 alias kali='$(PWD)/kali'
@@ -70,25 +70,25 @@ Quick shell profile inclusion from project `kali-docker` root folder (e.g. bash)
 echo "alias kali='`echo $PWD`/kali'" >> ~/.bashrc
 ```
 
-Now, with new shells that reload bash profile script, you can use `kali` command everywhere.
+Now, when you run a new shell in your host, you can use `kali` command everywhere.
 
-Check it! Try to run `kali` command w/o any argument, if it should return:
+Check it! Try to run `kali` command w/o any other command/argument:
 ```
 Kali Docker: Command not found
 ```
-In this case, no Kali command as argument specified.
+In this case no Kali command specified returns an error message.
 
 ## Files storage
-All containers executed by `kali` command are temporary containers, it means that every files stored outside folder `/opt` will be lost at container exit.   
+All containers executed by `kali` command are temporary containers, it means that every files stored outside folder `/opt` will be lost at container exit.
 Main tools that require persistent storage have their working folder in `/opt` 
 
 ## Examples
-You can run any kind of command installed on Kali container, for a quick summary, please check the list at the top of this page or try example shown below.
+You can run any kind of command installed on Kali container, for a quick summary check the list at the top of this page or try example shown below.  
 **Remember:** type Kali commands with arguments in quote: `kali "command arg1 arg2"`
 
 ### Bash
 
-You can enter into container and run command in a common cli
+You can run and connect to a container and use a standard `bash` cli
 ```
 kali bash
 ```
