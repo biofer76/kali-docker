@@ -1,8 +1,11 @@
 #!/bin/bash
-echo "+------------------------------------------+"
-echo "|     Kali Docker | MIT License 2020       |"
-echo "|  https://github.com/devxops/kali-docker  |"
-echo "+------------------------------------------+"
+# Credits
+if [ ! "$PRJ_CREDITS" = "no" ]; then
+  echo "+------------------------------------------+"
+  echo "|     Kali Docker | MIT License 2020       |"
+  echo "|  https://github.com/devxops/kali-docker  |"
+  echo "+------------------------------------------+"
+fi
 
 # Nmap
 export NMAP_FOLDER=/opt/nmap

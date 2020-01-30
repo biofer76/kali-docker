@@ -79,7 +79,7 @@ Kali Docker: Command not found
 In this case no Kali command specified returns an error message.
 
 ## Files storage
-All containers executed by `kali` command are temporary containers, it means that every files stored outside folder `/opt` will be lost at container exit.
+All containers executed by `kali` command are temporary containers, it means that every file stored outside folder `/opt` will be lost at container exit.
 Main tools that require persistent storage have their working folder in `/opt` 
 
 ## Examples
