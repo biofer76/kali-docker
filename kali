@@ -13,10 +13,10 @@ else
   docker volume create kali-docker > /dev/null 2>&1
 fi
 
-CONTAINER_NAME="kali-$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 8 | head -n 1)"
+CONTAINER_NAME="kali-$(date +%s | shasum | base64 | head -c 8 ; echo)"
 docker run --rm -it \
   -v "kali-docker:/opt" \
-  -v "/etc/localtime:/etc/localtime:ro" \
   --name $CONTAINER_NAME \
+  -e TZ=`ls -la /etc/localtime | cut -d/ -f8-9` \
   --hostname $CONTAINER_NAME \
   devxops/kali-docker $CMD

@@ -10,6 +10,7 @@ RUN apt-get update && apt-get upgrade -yq && \
     dnsrecon \
     theharvester \
     siege \
+    gobuster \
     speedtest-cli \
     mariadb-client postgresql-client redis-tools
 
