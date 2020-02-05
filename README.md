@@ -21,6 +21,8 @@ Siege is an http load testing and benchmarking utility. It was designed to let w
 **[metasploit](https://www.metasploit.com/)**  
 Metasploit helps security experts do more than just verify vulnerabilities, manage security assessments, and improve security awareness.
 
+**[gobuster](https://github.com/OJ/gobuster)**
+
 **[speedtest](https://github.com/sivel/speedtest-cli)**  
 Command line interface for testing internet bandwidth using speedtest.net
 
@@ -152,6 +154,7 @@ kali "dnsrecon -d hostname.com -j /path/to/results.json"
 ```
 
 ### theHarvester
+
 theHarvester requires configuration of api-keys.yaml for following modules:
 - bing
 - github
@@ -180,4 +183,11 @@ Use SHODAN database to query discovered hosts
 ```
 kali "theHarvester -d hostname.com -s"	
 ```
+
+### Gobuster
+
+Gobuster is a tool used to brute-force:
+- URIs (directories and files) in web sites.
+- DNS subdomains (with wildcard support).
+- Virtual Host names on target web servers.
 
