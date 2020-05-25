@@ -18,5 +18,6 @@ docker run --rm -it \
   -v "kali-docker:/opt" \
   --name $CONTAINER_NAME \
   -e TZ=`ls -la /etc/localtime | cut -d/ -f8-9` \
+  --network host \
   --hostname $CONTAINER_NAME \
   devxops/kali-docker $CMD
